@@ -50,5 +50,7 @@ Before deployment set your Heroku environment [config vars](https://devcenter.he
 Resources
 ----
 - [Twitter API statuses/filter stream](https://dev.twitter.com/docs/api/1.1/post/statuses/filter)
+- [Twitter REST API Rate Limiting](https://dev.twitter.com/docs/rate-limiting/1.1)
+- [AngularJS](https://angularjs.org/)
 - [PubNub AngularJS SDK](https://github.com/pubnub/pubnub-angular)
 - [Three.js](http://threejs.org/)
