@@ -99,7 +99,8 @@ router.get('/', function (req, res) {
 	// Render PubNub config for clien-side javascript to reference
   res.render('index', {
 		subscribe_key: nconf.get('PUBNUB_SUBSCRIBE_KEY'),
-		channel: 'tweet_stream'
+		channel: 'tweet_stream',
+		ga_tracking_id: nconf.get('GA_TRACKING_ID')
 	});
 });
 
