@@ -5,6 +5,8 @@ A real-time 3D visualization of Tweets from around the world.
 
 This web app attaches to the Twitter API stream/filter and runs rudimentry sentiment analysis on Tweets with geo data. Tweets are published via PubNub websockets and plotted to a 3D globe.
 
+Inspired by the [Web GL Globe Chrome Experiment](http://www.chromeexperiments.com/globe) and the [PubNub Real-Time WebGL Visualization](http://www.pubnub.com/blog/creating-real-time-webgl-visualizations/).
+
 ![Screenshot](screenshot.png?raw=true =858x "Screenshot")
 [Video Capture](https://vimeo.com/104759844) | [Running Demo](http://twitter-stream-globe.herokuapp.com/) (Availability of this server may fluctuate)
 
