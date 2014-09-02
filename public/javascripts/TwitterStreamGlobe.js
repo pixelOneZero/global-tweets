@@ -18,6 +18,11 @@
 	 */
 	TwtrGlobe.init = function () {
 		
+		if (!this.supportsWebGL()) {
+			window.location = '/upgrade';
+			return;
+		}
+
 		var innerWidth = window.innerWidth;
 		var innerHeight = window.innerHeight;
 
@@ -175,6 +180,13 @@
 	  camera.aspect = innerWidth / innerHeight;
 	  camera.updateProjectionMatrix();
 	  renderer.setSize(innerWidth, innerHeight);
+	}
+
+	/**
+	 * Detects WebGL support
+	 */
+	TwtrGlobe.supportsWebGL = function () {
+		return ( function () { try { var canvas = document.createElement( 'canvas' ); return !! window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); } catch( e ) { return false; } } )();
 	}
 
 	return TwtrGlobe;

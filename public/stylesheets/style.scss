@@ -215,3 +215,18 @@ a {
 		border-color: $color-positive;
 	}
 }
+
+#upgrade {
+	h1 {
+		font-size: 32px;
+		margin-bottom: 10px;
+	}
+	
+	a {
+		color: #55ACEE;
+		text-decoration: underline;
+	}
+	
+	margin: 50px;
+	font-weight: 300;
+}

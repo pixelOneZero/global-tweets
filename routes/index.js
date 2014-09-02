@@ -105,6 +105,17 @@ router.get('/', function (req, res) {
 });
 
 /**
+ * Defines upgrade page route
+ */
+router.get('/upgrade', function (req, res) {
+	
+	start();
+
+	// Render PubNub config for clien-side javascript to reference
+  res.render('upgrade');
+});
+
+/**
  * GET Starts stream
  */
 router.get('/stream/start', function (req, res) {
