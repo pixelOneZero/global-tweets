@@ -6,6 +6,7 @@ A real-time 3D visualization of Tweets from around the world.
 This web app attaches to the Twitter API stream/filter and runs rudimentry sentiment analysis on Tweets with geo data. Tweets are published via PubNub websockets and plotted to a 3D globe.
 
 ![Screenshot](screenshot.png?raw=true =858x "Screenshot")
+[Video Capture](https://vimeo.com/104759844)
 
 Installing and Running
 ----
