@@ -45,7 +45,7 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
 Deploying
 ---
-This application is already configured to run on Heroku and can be [deployed with Git](https://devcenter.heroku.com/articles/git).
+This application is already configured to run on Heroku's free tier (1x Standard Dyno) and can be [deployed with Git](https://devcenter.heroku.com/articles/git).
 
 Before deployment set your Heroku environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json.
 
