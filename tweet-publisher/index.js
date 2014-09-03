@@ -70,6 +70,9 @@ TweetPublisher.start = function () {
 	return response;
 }
 
+/**
+ * Stops the stream and publish interval
+ **/
 TweetPublisher.stop = function () {
 
 	var response = { };
@@ -80,7 +83,7 @@ TweetPublisher.stop = function () {
 		response.message = 'Stream stopped.'
 	}
 	else {
-		response.message = 'Stream was not started or has already been stopped.'
+		response.message = 'Stream does not exist.'
 	}
 
 	return response;
@@ -104,7 +107,7 @@ function publishTweet (tweet) {
 		channel: 'tweet_stream',
 		message: tweet,
 		callback: function (details) {
-			// the goggles do nothing
+			// success
 		}
 	});
 }
