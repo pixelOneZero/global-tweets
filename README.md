@@ -49,6 +49,8 @@ This application is already configured to run on Heroku and can be [deployed wit
 
 Before deployment set your Heroku environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json.
 
+On Heroku set NODE_ENV to "production."
+
 
 Resources
 ----
