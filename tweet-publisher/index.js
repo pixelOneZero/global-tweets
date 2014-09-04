@@ -32,18 +32,16 @@ TweetPublisher.start = function () {
 	// If the stream does not exist create it
 	if (!stream) {
 
-		// Connect to stram and filter by a geofence that is the size of the Earth
+		// Connect to stream and filter by a geofence that is the size of the Earth
 		stream = twitter.stream('statuses/filter', { locations: '-180,-90,180,90' });
 
 		// When Tweet is received only process it if it has geo data
 		stream.on('tweet', function (tweet) {	
-			if (tweet.coordinates) {
-				// calculate sentiment with "sentiment" module
-				tweet.sentiment = sentiment(tweet.text);
+			// calculate sentiment with "sentiment" module
+			tweet.sentiment = sentiment(tweet.text);
 
-				// save the Tweet so that the very latest Tweet is available and can be published
-				cachedTweet = tweet
-			}
+			// save the Tweet so that the very latest Tweet is available and can be published
+			cachedTweet = tweet
 		});
 
 		response.message = 'Stream created and started.'
@@ -60,7 +58,7 @@ TweetPublisher.start = function () {
 	}
 
 	// Only publish a Tweet every 100 millseconds so that the browser view is not overloaded
-	// This will provide a predicatble and consistent flow of real-time Tweets
+	// This will provide a predictable and consistent flow of real-time Tweets
 	publishInterval = setInterval(function () {
 		if (cachedTweet) {
 			publishTweet(cachedTweet);
