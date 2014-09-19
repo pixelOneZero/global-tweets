@@ -110,18 +110,27 @@ a {
 		bottom: 20px;
 		right: 15px;
 
+		#pubnub-logo {
+			position: relative;
+			top: -3px;
+			height: 22px;
+			width: auto;
+			opacity: 0.65;
+			margin-right: 5px;
+		}
+
 		#html5-logo {
 			position: relative;
 			top: 0px;
-			height: 40px;
+			height: 25px;
 			width: auto;
 			opacity: 0.65;
 		}
 
 		#nodejs-logo {
 			position: relative;
-			top: -3px;
-			height: 47px;
+			top: -2px;
+			height: 28px;
 			width: auto;
 			opacity: 0.65;
 		}
