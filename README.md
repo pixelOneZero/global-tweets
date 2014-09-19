@@ -58,12 +58,23 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
 Deploying
 ---
-This application is already configured to run on Heroku's free tier (1x Standard Dyno) and can be [deployed with Git](https://devcenter.heroku.com/articles/git).
+This application is ready to run on a free OpenShift or Heroku account, and can be [deployed with Git](https://devcenter.heroku.com/articles/git).
 
-Before deployment set your Heroku environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json.
+You can deploy to OpenShift with [`rhc`](https://github.com/openshift/rhc), by adding your own keys to the following command:
 
-On Heroku set NODE_ENV to "production."
+```
+rhc app create twglobe nodejs-0.10 \
+  --from-code=http://github.com/twitterdev/twitter-stream-globe.git \
+  NODE_ENV=production \ 
+  TWITTER_CONSUMER_KEY=YOUR_TWITTER_CONSUMER_KEY \
+  TWITTER_CONSUMER_SECRET=YOUR_TWITTER_CONSUMER_SECRET \
+  TWITTER_ACCESS_TOKEN=YOUR_TWITTER_ACCESS_TOKEN \
+  TWITTER_TOKEN_SECRET=YOUR_TWITTER_TOKEN_SECRET \
+  PUBNUB_PUBLISH_KEY=YOUR_PUBNUB_PUBLISH_KEY \
+  PUBNUB_SUBSCRIBE_KEY=YOUR_PUBNUB_SUBSCRIBE_KEY
+```
 
+Before deploying to Heroku, set your environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json, and set `NODE_ENV` to "production."
 
 Resources
 ----
