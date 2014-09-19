@@ -58,7 +58,15 @@ Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
 Deploying
 ---
-This application is ready to run on a free OpenShift or Heroku account, and can be [deployed with Git](https://devcenter.heroku.com/articles/git).
+This application is ready to run on a free OpenShift or Heroku account.
+
+**Heroku**
+
+You can deploy to Heroku via [Git](https://devcenter.heroku.com/articles/git) with the [Heroku toolbelt](https://toolbelt.heroku.com/).
+
+Before deploying to Heroku, set your environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json, and set `NODE_ENV` to "production."
+
+**OpenShift**
 
 You can deploy to OpenShift with [`rhc`](https://github.com/openshift/rhc), by adding your own keys to the following command:
 
@@ -73,8 +81,6 @@ rhc app create twglobe nodejs-0.10 \
   PUBNUB_PUBLISH_KEY=YOUR_PUBNUB_PUBLISH_KEY \
   PUBNUB_SUBSCRIBE_KEY=YOUR_PUBNUB_SUBSCRIBE_KEY
 ```
-
-Before deploying to Heroku, set your environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror config.json, and set `NODE_ENV` to "production."
 
 Resources
 ----
