@@ -9,11 +9,11 @@ var tweetPublisher = require('../tweet-publisher');
  * Defines route for root
  */
 router.get('/', function (req, res) {
-	
+
 	// start stream and publishing
 	tweetPublisher.start();
 
-	// Render PubNub config for clien-side javascript to reference
+	// Render PubNub config for client-side javascript to reference
   res.render('index', {
 		subscribe_key: nconf.get('PUBNUB_SUBSCRIBE_KEY'),
 		channel: 'tweet_stream',
@@ -45,13 +45,13 @@ router.get('/stream/stop', function (req, res) {
 var trends, trendsTimestamp;
 
 /**
- * GET Returns trens from Twitter trends API
+ * GET Returns trends from Twitter trends API
  */
 router.get('/trends', function (req, res) {
-	
+
 	var now = moment();
 
-	// Only allow request to trends api every 2 minutes to stay within rate limits
+	// Only allow request to trends API every 2 minutes to stay within rate limits
 	if (trends && trendsTimestamp.diff(now, 'minutes') < 2 ) {
 		// return trends from memory
 	  res.send(trends);

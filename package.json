@@ -18,7 +18,7 @@
     "node-compass": "0.2.3",
     "pubnub": "^3.6.7",
     "sentiment": "^1.0.1",
-    "static-favicon": "~1.0.0",
+    "serve-favicon": "^2.0.0",
     "twit": "^1.1.18"
   },
   "engines": {

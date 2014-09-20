@@ -1,6 +1,6 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('static-favicon');
+var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -17,9 +17,11 @@ if (app.get('env') === 'production') {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// express middlware
+// express middleware
+// comment the next line if NOT using Compass / deploying to Cloud Foundry
 app.use(require('node-compass')({mode: 'compress'}));
-app.use(favicon());
+
+app.use(favicon(__dirname + '/public/images/Twitter_logo_blue_small.png'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
