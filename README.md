@@ -65,6 +65,11 @@ You can deploy to Heroku via [Git](https://devcenter.heroku.com/articles/git) wi
 
 Before deploying to Heroku, set your environment [config vars](https://devcenter.heroku.com/articles/config-vars) to mirror `config.json`, and set `NODE_ENV` to "production."
 
+Tip: Managing the Twitter stream is more appropriately accomplished with a worker or background job. See this [gist](https://gist.github.com/stephenlb/36aef15a165d5bad0d82) for setting up a Twitter / PubNub [worker on Heroku](https://devcenter.heroku.com/articles/background-jobs-queueing). 
+
+
+
+
 **OpenShift**
 
 You can deploy to OpenShift with [`rhc`](https://github.com/openshift/rhc), by adding your own keys to the following command:
